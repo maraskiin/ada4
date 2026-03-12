@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="icon" href= "img/riico.jpg" type="/open-iconc/svg/favicon.png">
+
+	<title>Recursos | Fuera de Algoritmo</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+	<section class="slider">
+		<div class="slides">
+			<div class="slide active">
+				<img src="img/banner1.jpg">
+			</div>
+			<div class="slide">
+				<img src="img/banner2.jpg" alt="Lecturas recomendadas">
+			</div>
+			<div class="slide">
+				<img src="img/banner3.jpg" alt="Aplicaciones de enfoque">
+			</div>
+		</div>
+	</section>
+	
+	<h1>Recursos y Apoyo</h1>
+
+	<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+	
+	<nav id="navMenu">
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="problema.html">Problema</a></li>
+			<li><a href="datos.html">Datos y contexto</a></li>
+			<li><a href="solucion.html">Propuesta de solución</a></li>
+			<li><a href="recursos.html">Recursos</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+		</ul>	
+	</nav>
+</header>
+
+<div class="container">
+	<div class="main-content">
+		<div class="info-section">
+			<div class="info-text">
+				<h2>Herramientas para la Resistencia</h2>
+				<p>
+					No tienes que hacerlo solo. Hemos recopilado una selección de materiales que te ayudarán a entender mejor el sistema y a proteger tu mente del bombardeo digital.
+				</p>
+                <br>
+                <h3>Documentales y Lecturas</h3>
+                <p>
+                    <strong>"El Dilema de las Redes Sociales" (Netflix):</strong> Un documental esencial donde ex-ingenieros de Google y Facebook explican cómo nos manipulan.
+                </p>
+                <p>
+                    <strong>"Minimalismo Digital" por Cal Newport:</strong> El libro definitivo para aprender a vivir una vida enfocada en un mundo ruidoso.
+                </p>
+                <br>
+                <h3>Apps para el Bienestar</h3>
+                <p>
+                    Existen aplicaciones diseñadas para ayudarte a soltar el móvil, como <strong>Forest</strong> (plantas un árbol virtual mientras no tocas el celular) o <strong>StayFocusd</strong> para bloquear sitios adictivos.
+                </p>
+			</div>
+			<div class="info-image">
+				<img src="img/img5.jpg">
+			</div>	
+		</div>
+	</div>
+
+	<div class="sidebar">
+		<div class="sidebar-content">
+			<div class="info-sidebar">
+				<div class="info-text">
+    <h2>¿El Algoritmo te Domina?</h2>
+    <p>Responde con la verdad. Selecciona las cosas que te pasan y descubre qué tan enganchado estás:</p>
+    <br>
+    
+    <form id="testForm" style="background: #1e293b; padding: 25px; border-radius: 15px; border: 2px solid #38bdf8; color: white;">
+        <div style="margin-bottom: 15px; display: flex; align-items: center;">
+            <input type="checkbox" class="pregunta" id="p1" style="width: 20px; height: 20px; margin-right: 15px;"> 
+            <label for="p1"> ¿Es el cel lo primero que tocas al despertar?</label>
+        </div>
+        <div style="margin-bottom: 15px; display: flex; align-items: center;">
+            <input type="checkbox" class="pregunta" id="p2" style="width: 20px; height: 20px; margin-right: 15px;"> 
+            <label for="p2"> ¿Sientes que el cel vibra aunque no tengas notificaciones?</label>
+        </div>
+        <div style="margin-bottom: 15px; display: flex; align-items: center;">
+            <input type="checkbox" class="pregunta" id="p3" style="width: 20px; height: 20px; margin-right: 15px;"> 
+            <label for="p3"> ¿Entras a Instagram "solo un segundo" y sales 1 hora después?</label>
+        </div>
+        <div style="margin-bottom: 15px; display: flex; align-items: center;">
+            <input type="checkbox" class="pregunta" id="p4" style="width: 20px; height: 20px; margin-right: 15px;"> 
+            <label for="p4"> ¿Te da ansiedad si tienes menos del 10% de batería?</label>
+        </div>
+        <div style="margin-bottom: 15px; display: flex; align-items: center;">
+            <input type="checkbox" class="pregunta" id="p5" style="width: 20px; height: 20px; margin-right: 15px;"> 
+            <label for="p5"> ¿Prefieres ver TikToks que hablar con quien tienes enfrente?</label>
+        </div>
+        <br>
+        <button type="button" onclick="calcularResultado()" style="background: #38bdf8; color: #0f172a; padding: 15px; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; width: 100%; font-size: 1rem;">VER MI NIVEL DE DAÑO</button>
+    </form>
+
+    <div id="resultado" style="display:none; margin-top: 25px; padding: 20px; border-radius: 15px; background: #334155; text-align: center; border: 2px dashed #38bdf8;">
+        <h3 id="tituloResultado" style="color: #38bdf8; margin-bottom: 10px;"></h3>
+        <p id="textoResultado"></p>
+    </div>
+</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>Derechos de autor &copy; 2026 - Fuera de Algoritmo</p>
+</footer>
+
+<div class="floating-social"> 
+	<a href="#"><i class="fab fa-facebook-f"></i></a>
+	<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		const slides = document.querySelector('.slides');
+		if (!slides) return;
+		let index = 0;
+		const totalSlides = document.querySelectorAll('.slide').length;
+		setInterval(() => {
+			index = (index + 1) % totalSlides;
+			slides.style.transform = `translateX(-${index * 100 }%)`;
+		}, 3000);
+	});
+
+	function toggleMenu() {
+		const navMenu = document.getElementById("navMenu");
+		navMenu.classList.toggle("responsive");
+	}
+</script>
+<script>
+    function calcularResultado() {
+        const checks = document.querySelectorAll('.pregunta:checked').length;
+        const divResultado = document.getElementById('resultado');
+        const titulo = document.getElementById('tituloResultado');
+        const texto = document.getElementById('textoResultado');
+
+        divResultado.style.display = 'block';
+
+        if (checks <= 1) {
+            titulo.innerText = "Nivel: Humano Libre 🌱";
+            texto.innerText = "Wow, casi no te afecta. Eres una especie en peligro de extinción. Sigue así.";
+        } else if (checks <= 3) {
+            titulo.innerText = "Nivel: Usuario Promedio 📱";
+            texto.innerText = "Estás en la cuerda floja. El algoritmo te conoce, pero aún puedes escapar.";
+        } else {
+            titulo.innerText = "Nivel: Zombie del Algoritmo 💀";
+            texto.innerText = "Ya perdiste el control. Tu tiempo le pertenece a las empresas. ¡Checa la sección de Solución urgente!";
+        }
+    }
+</script>
+</body>
+</html>

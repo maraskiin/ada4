@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="icon" href= "img/riico.jpg" type="/open-iconc/svg/favicon.png">
+
+	<title>Datos y Contexto | Fuera de Algoritmo</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+	<section class="slider">
+		<div class="slides">
+			<div class="slide active">
+				<img src="img/banner1.jpg">
+			</div>
+			<div class="slide">
+				<img src="img/banner2.jpg" alt="Salud mental digital">
+			</div>
+			<div class="slide">
+				<img src="img/banner3.jpg" alt="Desconexión total">
+			</div>
+		</div>
+	</section>
+	
+	<h1>Datos y Contexto</h1>
+
+	<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+	
+	<nav id="navMenu">
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="problema.html">Problema</a></li>
+			<li><a href="datos.html">Datos y contexto</a></li>
+			<li><a href="solucion.html">Propuesta de solución</a></li>
+			<li><a href="recursos.html">Recursos</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+		</ul>	
+	</nav>
+</header>
+
+<div class="container">
+	<div class="main-content">
+		<div class="info-section">
+			<div class="info-text">
+				<h2>La realidad en cifras</h2>
+				<p>
+					Para entender la magnitud del desafío, debemos observar las estadísticas. El consumo digital ha dejado de ser una herramienta para convertirse en una parte desproporcionada de nuestra vida diaria.
+				</p>
+                <br>
+                <h3>Consumo promedio de pantallas</h3>
+				<p>
+					Un usuario promedio pasa aproximadamente <strong>6 horas y 40 minutos</strong> conectado a internet diariamente. En jóvenes de entre 16 y 24 años, esta cifra puede superar las <strong>9 horas</strong>.
+				</p>
+                <br>
+                <h3>Impacto en la salud</h3>
+                <p>
+                    El uso de redes sociales por más de 3 horas al día está asociado con un aumento del riesgo de desarrollar síntomas de ansiedad y depresión en adolescentes.
+                </p>
+			</div>
+			<div class="info-image">
+				<img src="img/img6.jpeg" alt="Estadísticas de uso móvil">
+			</div>	
+		</div>
+	</div>
+
+	<div class="sidebar">
+		<div class="sidebar-content">
+			<div class="info-sidebar">
+				<h3>Datos Rápidos</h3>
+				<ul>
+					<li><strong>150 veces:</strong> Promedio de desbloqueos diarios del celular.</li>
+					<li><strong>2 horas:</strong> Tiempo promedio invertido solo en redes.</li>
+					<li><strong>8 segundos:</strong> El tiempo de atención actual promedio.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="fuentes-seccion" style="margin-top: 50px; padding: 20px; border-top: 1px solid #334155;">
+    <h4 style="color: #38bdf8; font-size: 0.9rem; text-transform: uppercase;">Fuentes de información verificada:</h4>
+    <ul style="list-style: none; font-size: 0.85rem; color: #94a3b8; padding-left: 0;">
+        <li style="margin-bottom: 8px;">
+            <i class="fas fa-external-link-alt"></i> 
+            <a href="https://www.mayoclinic.org" target="_blank" style="color: #94a3b8; text-decoration: underline;">Mayo Clinic: Impacto de las redes sociales en adolescentes</a>
+        </li>
+        <li>
+            <i class="fas fa-external-link-alt"></i> 
+            <a href="https://www.humanetech.com" target="_blank" style="color: #94a3b8; text-decoration: underline;">Center for Humane Tech: The Social Dilemma Research</a>
+        </li>
+    </ul>
+</div>
+
+<footer>
+	<p>Derechos de autor &copy; 2026 - Fuera de Algoritmo</p>
+</footer>
+
+<div class="floating-social"> 
+	<a href="#"><i class="fab fa-facebook-f"></i></a>
+	<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		const slides = document.querySelector('.slides');
+		if (!slides) return;
+		let index = 0;
+		const totalSlides = document.querySelectorAll('.slide').length;
+		setInterval(() => {
+			index = (index + 1) % totalSlides;
+			slides.style.transform = `translateX(-${index * 100 }%)`;
+		}, 3000);
+	});
+
+	function toggleMenu() {
+		const navMenu = document.getElementById("navMenu");
+		navMenu.classList.toggle("responsive");
+	}
+</script>
+
+</body>
+</html>

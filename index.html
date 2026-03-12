@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="icon" href= "img/riico.jpg" type="/open-iconc/svg/favicon.png">
+
+	<title>Fuera de Algoritmo</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+	<section class="slider">
+		<div class="slides">
+			<div class="slide active">
+				<img src="img/banner1.jpg">
+			</div>
+			<div class="slide">
+				<img src="img/banner2.jpg" alt="Salud mental digital">
+			</div>
+			<div class="slide">
+				<img src="img/banner3.jpg" alt="Desconexión total">
+			</div>
+		</div>
+	</section>
+	
+	<h1>Fuera de Algoritmo</h1>
+
+	<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+	<nav id="navMenu">
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="problema.html">Problema</a></li>
+			<li><a href="datos.html">Datos y contexto</a></li>
+			<li><a href="solucion.html">Propuesta de solución</a></li>
+			<li><a href="recursos.html">Recursos</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+		</ul>	
+	</nav>
+</header>
+
+<div class="container">
+	<div class="main-content"> <div class="info-section">
+			<div class="info-text">
+				<h2>Bienvenidos a Fuera de Algoritmo</h2>
+				<p>
+					Hola, soy Oliany Ucan, alumna del COBAY plantel Santa Rosa, y hago este sitio web porque busco crear conciencia en los adolescentes sobre este tema del cual no se ha hablado lo suficiente.
+				</p>
+				<br>
+				<p>
+					Tu atención es el negocio más millonario del mundo y tú la estás regalando. 
+					Las apps que usas no son gratis: las pagas con tu tiempo y tu salud mental. 
+					Fuera de Algoritmo es tu zona de hackeo para entender cómo te enganchan y cómo recuperar el mando de tu vida. Salgamos del bucle.
+				</p>
+			</div>
+			<div class="info-image">
+				<img src="img/gift1.gif">
+			</div>	
+		</div>
+	</div>
+
+	<div class="sidebar">
+		<div class="sidebar-content">
+			<div class="video-section">
+				<h3>Video destacado</h3>
+				<div class="video-container">
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/wqQ0L8LKuh4?si=0WkjrzJT1gTw3vVu" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>						
+				</div>
+			</div>
+			<div class="info-sidebar">
+				<h3>¿Sabías que?</h3>
+				<p>
+					El cerebro humano no está diseñado para el bombardeo constante de estímulos digitales. 
+					La "economía de la atención" busca monetizar cada segundo de tu mirada.
+				</p>
+				<ul>
+					<li>La dopamina guía tus clics</li>
+					<li>El scroll no tiene fin por diseño</li>
+					<li>Tu atención es el producto</li>
+					<li>Desconectarse es un acto de rebeldía</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>Derechos de autor &copy; 2026 - Fuera de Algoritmo</p>
+</footer>
+
+<div class="floating-social"> 
+	<a href="#"><i class="fab fa-facebook-f"></i></a>
+	<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+
+<div style="text-align: center; margin-top: 10px; color: #64748b; font-size: 0.8rem;">
+    Visitas a este sitio: <span id="visits">...</span>
+</div>
+
+<script>
+    function cb(response) {
+        document.getElementById('visits').innerText = response.value;
+    }
+</script>
+<script async src="https://api.countapi.xyz/hit/fueradealgoritmo.com/visits?callback=cb"></script>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		const slides = document.querySelector('.slides');
+		if (!slides) return;
+		let index = 0;
+		const totalSlides = document.querySelectorAll('.slide').length;
+		setInterval(() => {
+			index = (index + 1) % totalSlides;
+			slides.style.transform = `translateX(-${index * 100 }%)`;
+		}, 3000);
+	});
+
+	function toggleMenu() {
+		const navMenu = document.getElementById("navMenu");
+		navMenu.classList.toggle("responsive");
+	}
+</script>
+
+</body>
+</html>

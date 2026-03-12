@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="icon" href= "img/riico.jpg" type="/open-iconc/svg/favicon.png">
+
+	<title>Ayuda y Contacto | Fuera de Algoritmo</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+	<section class="slider">
+		<div class="slides">
+			<div class="slide active">
+				<img src="img/banner1.jpg">
+			</div>
+			<div class="slide">
+				<img src="img/banner2.jpg">
+			</div>
+			<div class="slide">
+				<img src="img/banner3.jpg">
+			</div>
+		</div>
+	</section>
+	
+	<h1>¿Necesitas un respiro?</h1>
+
+	<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+	
+	<nav id="navMenu">
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="problema.html">Problema</a></li>
+			<li><a href="datos.html">Datos y contexto</a></li>
+			<li><a href="solucion.html">Propuesta de solución</a></li>
+			<li><a href="recursos.html">Recursos</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+		</ul>	
+	</nav>
+</header>
+
+<div class="container">
+	<div class="main-content">
+		<div class="info-section">
+			<div class="info-text">
+				<h2>No estás solo en esto</h2>
+				<p>
+					Si sientes que el mundo digital te está sobrepasando, que la ansiedad por las notificaciones no te deja dormir o que tu autoestima depende de un "like", es momento de hablarlo. 
+				</p>
+                <br>
+                <h3>Escríbenos tu historia</h3>
+                <p>Usa este formulario para enviarnos tus dudas o simplemente para desahogarte. Prometemos leerte fuera de cualquier algoritmo.</p>
+                <br>
+                <form action="#" class="contact-form">
+                    <div style="margin-bottom: 15px;">
+                        <label for="nombre" style="display: block; margin-bottom: 5px;">Nombre o Alias:</label>
+                        <input type="text" id="nombre" name="nombre" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #334155; background: #0f172a; color: white;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="mensaje" style="display: block; margin-bottom: 5px;">¿Cómo te sientes hoy?</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #334155; background: #0f172a; color: white;" placeholder="Cuéntanos lo que quieras..."></textarea>
+                    </div>
+                    <button type="submit" style="background: #38bdf8; color: #0f172a; padding: 10px 20px; border: none; border-radius: 5px; font-weight: bold; cursor: pointer; width: 100%;">Enviar Mensaje</button>
+                </form>
+			</div>
+		</div>
+	</div>
+
+	<div class="sidebar">
+		<div class="sidebar-content">
+			<div class="info-sidebar">
+				<h3 style="color: #38bdf8;"><i class="fas fa-phone-alt"></i> Números de Apoyo</h3>
+				<p>Si sientes ansiedad extrema o necesitas hablar con un profesional de inmediato:</p>
+				<ul style="list-style: none; padding: 0; margin-top: 15px;">
+					<li style="margin-bottom: 15px; border-bottom: 1px solid #334155; padding-bottom: 5px;">
+                        <strong>Línea de la Vida:</strong><br>
+                        <span style="color: #38bdf8; font-size: 1.2rem;">800 911 2000</span>
+                    </li>
+					<li style="margin-bottom: 15px; border-bottom: 1px solid #334155; padding-bottom: 5px;">
+                        <strong>Apoyo Psicológico UNAM:</strong><br>
+                        <span style="color: #38bdf8;">55 5025 0855</span>
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                        <strong>Emergencias:</strong><br>
+                        <span style="color: #38bdf8; font-size: 1.2rem;">911</span>
+                    </li>
+				</ul>
+                <p style="font-size: 0.8rem; color: #94a3b8; margin-top: 10px;">
+                    *Servicios disponibles 24/7. No dudes en llamar si te sientes mal.
+                </p>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>Derechos de autor &copy; 2026 - Fuera de Algoritmo</p>
+</footer>
+
+<div class="floating-social"> 
+	<a href="#"><i class="fab fa-facebook-f"></i></a>
+	<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+
+<script>
+	document.addEventListener("DOMContentLoaded", function() {
+		const slides = document.querySelector('.slides');
+		if (!slides) return;
+		let index = 0;
+		const totalSlides = document.querySelectorAll('.slide').length;
+		setInterval(() => {
+			index = (index + 1) % totalSlides;
+			slides.style.transform = `translateX(-${index * 100 }%)`;
+		}, 3000);
+	});
+
+	function toggleMenu() {
+		const navMenu = document.getElementById("navMenu");
+		navMenu.classList.toggle("responsive");
+	}
+</script>
+
+</body>
+</html>

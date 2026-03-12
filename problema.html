@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+			<link rel="icon" href= "img/riico.jpg" type="/open-iconc/svg/favicon.png">
+
+	<title>El Problema | Fuera de Algoritmo</title>
+	<link rel="stylesheet" type="text/css" href="css/estilo.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<header>
+	<section class="slider">
+		<div class="slides">
+			<div class="slide active">
+				<img src="img/banner1.jpg">
+			</div>
+			<div class="slide">
+				<img src="img/banner2.jpg" alt="Salud mental digital">
+			</div>
+			<div class="slide">
+				<img src="img/banner3.jpg" alt="Desconexión total">
+			</div>
+		</div>
+	</section>
+	
+	<h1>El Problema</h1>
+
+	<div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+	
+	<nav id="navMenu">
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="problema.html">Problema</a></li>
+			<li><a href="datos.html">Datos y contexto</a></li>
+			<li><a href="solucion.html">Propuesta de solución</a></li>
+			<li><a href="recursos.html">Recursos</a></li>
+			<li><a href="contacto.html">Contacto</a></li>
+		</ul>	
+	</nav>
+</header>
+
+<div class="container">
+	<div class="main-content">
+		<div class="info-section">
+			<div class="info-text">
+				<h2>Tu atención es el campo de batalla</h2>
+				<p>
+					El problema no es la tecnología, sino cómo está diseñada. Las plataformas actuales utilizan una estrategia llamada <strong>Diseño Adictivo</strong>. Cada vez que deslizas el dedo hacia abajo (scroll), estás activando un mecanismo cerebral similar al de las máquinas tragamonedas.
+				</p>
+				<br>
+				<h3>¿Qué está pasando realmente?</h3>
+				<p>
+					Las empresas tecnológicas compiten por el recurso más valioso del planeta: <strong>tu tiempo</strong>. Para retenerte, el algoritmo aprende tus debilidades y te muestra contenido que genera emociones fuertes, manteniéndote en un ciclo infinito de dopamina que afecta tu capacidad de concentración, tu sueño y tu autoestima.
+				</p>
+			</div>
+			<div class="info-image">
+				<img src="img/img2.jpg">
+			</div>	
+		</div>
+	</div>
+
+	<div class="sidebar">
+		<div class="sidebar-content">
+			<div class="info-sidebar">
+				<h3>Efectos Colaterales</h3>
+				<ul>
+					<li><strong>Ansiedad (FOMO):</strong> El miedo constante a perderse de algo.</li>
+					<li><strong>Dismorfia Digital:</strong> Comparar nuestra realidad con vidas filtradas.</li>
+					<li><strong>Atención Fragmentada:</strong> Dificultad para leer o pensar profundamente.</li>
+					<li><strong>Efecto Cámara de Eco:</strong> Solo vemos lo que el algoritmo quiere que veamos.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer>
+	<p>Derechos de autor &copy; 2026 - Fuera de Algoritmo</p>
+</footer>
+
+<div class="floating-social"> 
+	<a href="#"><i class="fab fa-facebook-f"></i></a>
+	<a href="#"><i class="fab fa-instagram"></i></a>
+</div>
+
+<script>
+	// Script para que el slider funcione
+	document.addEventListener("DOMContentLoaded", function() {
+		const slides = document.querySelector('.slides');
+		if (!slides) return;
+		let index = 0;
+		const totalSlides = document.querySelectorAll('.slide').length;
+		setInterval(() => {
+			index = (index + 1) % totalSlides;
+			slides.style.transform = `translateX(-${index * 100 }%)`;
+		}, 3000);
+	});
+
+	// Función para el menú
+	function toggleMenu() {
+		const navMenu = document.getElementById("navMenu");
+		navMenu.classList.toggle("responsive");
+	}
+</script>
+
+</body>
+</html>
